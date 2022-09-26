@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<table class="table table-dark table-hover">
+    <div th:each="user : ${users}">
+        <a th:href="@{/pages/{id}(id=${user.getId()})}" th:text="${user.getName()}" id="name" >user</a>
+    </div>
+</table>
+<br/>
+<hr/>
+<a href="/new">Добавить</a>
+</body>
+</html>
