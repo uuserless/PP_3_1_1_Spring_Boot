@@ -16,7 +16,7 @@ public class UserController {
     }
 
     @GetMapping(value = "/")
-    public String viewAllUsers(Model model) {
+    public String printAllUsers(Model model) {
         model.addAttribute("users", userService.findAllUsers());
         return "/pages/allUsers";
     }
